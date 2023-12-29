@@ -4,7 +4,7 @@
 - Operation of the system is optimized with the semi-brute force method
    - For an optimization horizon, for example 24 h, there are 24+1 options to charge storage starting from no charge at all: charge during the cheapest hour, during two of the cheapest hours, during three of the cheapest hours etc.
    - The objective is to minimize the levelized cost of electricity
-- Unit capacities can be optimized with additional optimization methods, such as genetic algorithm.
+- Unit capacities are optimized with additional optimization methods, such as genetic algorithm in this case example.
 
 ## How to run the model?
 1. Modify settings and input data in `run_model_003_solar_PV_battery.m` and run it
