@@ -1,7 +1,7 @@
 # semibrute
 ## semi-brute force method to optimize household solar PV and battery capacity
 - An explicit time-marching solver for energy balance with a one-hour time step. Optimize both operation and capacities.
-- Does not need linearization
+- Supports non-linear functions, lookup tables and such
 - Operation of the system is optimized with the semi-brute force method
    - For an optimization horizon, for example 24 h, there are 24+1 options to charge storage starting from no charge at all: charge during the cheapest hour, during two of the cheapest hours, during three of the cheapest hours etc.
    - The objective is to minimize the levelized cost of electricity
