@@ -6,10 +6,9 @@
 4. Unit capacities can be optimized with additional optimization methods, such as genetic algorithms. 
 
 ---
-## Example results
+### Example week
 
-One week
 ![example week](figures/week1.png)
 
-One year
+### Example year
 ![example week](figures/year1.png)
