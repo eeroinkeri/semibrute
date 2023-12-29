@@ -8,4 +8,8 @@
 ---
 ## Example results
 
+One week
 ![example week](figures/week1.png)
+
+One year
+![example week](figures/year1.png)
