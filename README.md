@@ -1,10 +1,10 @@
 # semibrute
-## semi-brute force method to optimize systems with storage
-- An explicit time-marching solver for energy and mass balance with a one-hour time step. Optimize various problems that have storage, and variable costs and demands as time series. Optimize both operation and capacities.
-- Objective is to minimize levelized cost of electricity
-- For an optimization horizon, for example 24 h, there are 24+1 options to charge storage starting from no charge at all: charge during the cheapest hour, during two of the cheapest hours, during three of the cheapest hours etc.
+## semi-brute force method to optimize household solar PV and battery capacity
+- An explicit time-marching solver for energy balance with a one-hour time step. Optimize both operation and capacities.
 - Operation of the system is optimized with the semi-brute force method
-- Unit capacities can be optimized with additional optimization methods, such as genetic algorithms.
+   - For an optimization horizon, for example 24 h, there are 24+1 options to charge storage starting from no charge at all: charge during the cheapest hour, during two of the cheapest hours, during three of the cheapest hours etc.
+   - The objective is to minimize the levelized cost of electricity
+- Unit capacities can be optimized with additional optimization methods, such as genetic algorithm.
 
 ## How to run the model?
 1. Modify settings and input data in `run_model_003_solar_PV_battery.m` and run it
