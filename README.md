@@ -8,7 +8,7 @@
 ## How to run the model?
 1. Set the problem up with `run_model_003_solar_PV_battery.m`
 2. Set the problem up with `fun_003_solar_PV_battery.m` is called and does the main work
-3. Plot results with `plot_003`
+3. Plot results with `plot_003.m`
 
 ---
 ### Example week
