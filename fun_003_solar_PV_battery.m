@@ -262,7 +262,7 @@ for i = 1:sim_time/roll_time
             P_charge(h,j) = + P_charge_grid(h,j) + P_charge_solar(h,j) - P_discharge(h,j);
             E_battery(h,j)  = E_battery_previous + P_charge(h,j);
  
-            % Prevent overcharge -> should not be possible!
+            % Prevent overcharge, however it should not be possible
             if E_battery(h,j) > E_battery_max
                 E_battery(h,j) = E_battery_max;
             end
@@ -276,9 +276,9 @@ for i = 1:sim_time/roll_time
                         - P_curt(h,j) ...
                         - P_charge(h,j) ...
                         - demand(ih))./demand(ih)*100);
-%             if err_check > 0.1 
-%                 warning('Check mass balance');    % or add breakpoint here.. 
-%             end
+            if err_check > 0.1 
+                warning('Check energy balance');    % or add breakpoint here 
+            end
             
             
         end        
