@@ -8,7 +8,7 @@
 
 ## How to run the model?
 1. Modify settings and input data in `run_model_003_solar_PV_battery.m` and run it
-   - Input time series are used for solar power profile and household electricity demand
+   - Input time series are used for solar power profile, electricity market price, and household electricity demand
    - There is a possibility to either optimize some variables (battery capacity, battery power, and solar capacity) or to use fixed values
 3. `fun_003_solar_PV_battery.m` is called and does the main work
 4. Plot results with `plot_003.m`
