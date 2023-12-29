@@ -6,7 +6,7 @@
    - The objective is to minimize the levelized cost of electricity
 - Unit capacities are optimized with additional optimization methods, such as genetic algorithm in this case example.
 
-## How to run the model?
+## How to run the model? (in Matlab)
 1. Modify settings and input data in `run_model_003_solar_PV_battery.m` and run it
    - Input time series are used for solar power profile, electricity market price, and household electricity demand
    - There is a possibility to either optimize some variables (battery capacity, battery power, and solar capacity) or to use fixed values
