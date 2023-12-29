@@ -27,11 +27,11 @@ capex_pv                = 1200;     % [€/kW]
 demand_total    = 15000; 
 
 % Costs
-cost_tax        = 2.79372/100;      % €/kWh     electricity tax, class I. For class II, tax is 0.07812 c/kWh
-cost_basic      = 8.11 + 25.34;     % €/month   basic cost per month
-cost_trans_day  = 3.44/100;         % €/kWh     transmission cost during the night
-cost_trans_nig  = 2.24/100;         % €/MWh     transmission cost during the day
-cost_power      = 1/100;            % €/kW/month
+cost_tax        = 2.8/100;      % €/kWh         electricity tax, class I. For class II, tax is 0.07812 c/kWh
+cost_basic      = 30;           % €/month       basic cost per month
+cost_trans_day  = 3/100;        % €/kWh         transmission cost during the night
+cost_trans_nig  = 2/100;        % €/MWh         transmission cost during the day
+cost_power      = 1/100;        % €/kW/month    cost of power connection
 
 % Sensitivity analysis parameters (one for-loop for each, or then provide distribution for all with N values)
 cost_ele_factor_all     = [1:6];   % [-]       factor for multiplication 
