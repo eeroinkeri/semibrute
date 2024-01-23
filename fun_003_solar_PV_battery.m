@@ -85,8 +85,15 @@ for i = 1:sim_time/roll_time
     spot_set    = cost_ele((i-1)*roll_time+1:(i-1)*roll_time+opt_time);
     demand_set  = demand((i-1)*roll_time+1:(i-1)*roll_time+opt_time);
     spot_sort   = [sort(spot_set); 1e9];
-    spot_sort0  = [sort(spot_set)];
-    [~,id_sort] = sort(spot_set,'descend');  
+
+    % help to sort spot prices for discharge
+    id_sort_set = {};
+    for ii = 1:opt_time
+        spot_temp = spot_set(ii:end);
+        idh_temp = idh(ii:end);
+        [~,id_sort_col] = sort(spot_temp,'descend');
+        id_sort_set{ii} = idh_temp(id_sort_col);
+    end   
     
     % initiate arrays
     n_try_limits    = opt_time+1;
@@ -164,11 +171,12 @@ for i = 1:sim_time/roll_time
             %n_discharge = floor(E_TES/mean(q_DH_set(h:h+(opt_time-h))))+1;      % more accurate but slow
 
             % logical 1 or 0, allow discharge or not
-            if n_discharge >= 1 && n_discharge <= opt_time
+            id_sort = id_sort_set{h}; % pick indexes only from h onwards
+            if n_discharge >= 1 && n_discharge <= length(id_sort)
                 h_discharge(idh(id_sort(1:n_discharge))) = 1;       
-            elseif n_discharge > opt_time
+            elseif n_discharge > length(id_sort)
                 h_discharge(:) = 1;
-            end 
+            end
 
             % discharge is allowed
             if h_discharge(h) == 1
